@@ -813,12 +813,16 @@ int CDVDVideoCodecFFmpeg::FilterProcess(AVFrame* frame)
 
   if (frame)
   {
+#if !(defined HAVE_LIBAVFILTER_VSRC_BUFFER_H)
 #if LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,13,0)
     result = m_dllAvFilter.av_vsrc_buffer_add_frame(m_pFilterIn, frame, 0);
 #elif LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,7,0)
     result = m_dllAvFilter.av_vsrc_buffer_add_frame(m_pFilterIn, frame);
 #elif LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(53,3,0)
     result = m_dllAvFilter.av_vsrc_buffer_add_frame(m_pFilterIn, frame, frame->pts);
+#else
+    result = m_dllAvFilter.av_vsrc_buffer_add_frame(m_pFilterIn, frame, frame->pts, m_pCodecContext->sample_aspect_ratio);
+#endif
 #else
     result = m_dllAvFilter.av_vsrc_buffer_add_frame(m_pFilterIn, frame, frame->pts, m_pCodecContext->sample_aspect_ratio);
 #endif
