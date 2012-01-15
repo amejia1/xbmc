@@ -46,14 +46,11 @@
 		DFD4D1E213D725ED00A47C47 /* Implementation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFD4D1D813D725ED00A47C47 /* Implementation.cpp */; };
 		DFD4D1E713D7263000A47C47 /* README.platform in Resources */ = {isa = PBXBuildFile; fileRef = DFD4D1E613D7263000A47C47 /* README.platform */; };
 		DFD4D1FE13D7283500A47C47 /* SystemClock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFD4D1FC13D7283500A47C47 /* SystemClock.cpp */; };
+		F5610A0314C3781F00171134 /* XBMCTinyXML.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5610A0214C3781F00171134 /* XBMCTinyXML.cpp */; };
 		F56B143412CAF279009B4C96 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56B143312CAF279009B4C96 /* CoreVideo.framework */; };
 		F56B14A512CAF523009B4C96 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56B14A412CAF523009B4C96 /* AudioToolbox.framework */; };
 		F56B15D512CD67A9009B4C96 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56B15D412CD67A9009B4C96 /* CoreGraphics.framework */; };
 		F56B160812CD6999009B4C96 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56B160712CD6999009B4C96 /* ImageIO.framework */; };
-		F56C87FE131F42ED000AD0F6 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F56C8040131F42E5000AD0F6 /* tinystr.cpp */; };
-		F56C87FF131F42ED000AD0F6 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F56C8042131F42E5000AD0F6 /* tinyxml.cpp */; };
-		F56C8800131F42ED000AD0F6 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F56C8044131F42E5000AD0F6 /* tinyxmlerror.cpp */; };
-		F56C8801131F42ED000AD0F6 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F56C8045131F42E5000AD0F6 /* tinyxmlparser.cpp */; };
 		F56C8802131F42ED000AD0F6 /* htsatomic.c in Sources */ = {isa = PBXBuildFile; fileRef = F56C8053131F42E5000AD0F6 /* htsatomic.c */; };
 		F56C8803131F42ED000AD0F6 /* htsbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = F56C8055131F42E5000AD0F6 /* htsbuf.c */; };
 		F56C8804131F42ED000AD0F6 /* htsmsg.c in Sources */ = {isa = PBXBuildFile; fileRef = F56C8057131F42E5000AD0F6 /* htsmsg.c */; };
@@ -1031,6 +1028,8 @@
 		DFD4D1FD13D7283500A47C47 /* SystemClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemClock.h; sourceTree = "<group>"; };
 		F558F60613AFDC1700631E12 /* Condition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Condition.h; sourceTree = "<group>"; };
 		F558F61013AFDC3000631E12 /* ThreadLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadLocal.h; sourceTree = "<group>"; };
+		F5610A0214C3781F00171134 /* XBMCTinyXML.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XBMCTinyXML.cpp; sourceTree = "<group>"; };
+		F5610A0414C3782400171134 /* XBMCTinyXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBMCTinyXML.h; sourceTree = "<group>"; };
 		F56B143312CAF279009B4C96 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		F56B14A412CAF523009B4C96 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F56B15D412CD67A9009B4C96 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1043,12 +1042,6 @@
 		F56C803B131F42E5000AD0F6 /* DllStSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DllStSound.h; sourceTree = "<group>"; };
 		F56C803C131F42E5000AD0F6 /* DllTimidity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DllTimidity.h; sourceTree = "<group>"; };
 		F56C803D131F42E5000AD0F6 /* DllVorbisfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DllVorbisfile.h; sourceTree = "<group>"; };
-		F56C8040131F42E5000AD0F6 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
-		F56C8041131F42E5000AD0F6 /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinystr.h; sourceTree = "<group>"; };
-		F56C8042131F42E5000AD0F6 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
-		F56C8043131F42E5000AD0F6 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
-		F56C8044131F42E5000AD0F6 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
-		F56C8045131F42E5000AD0F6 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
 		F56C8047131F42E5000AD0F6 /* libexif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libexif.h; sourceTree = "<group>"; };
 		F56C8049131F42E5000AD0F6 /* hdhomerun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdhomerun.h; sourceTree = "<group>"; };
 		F56C804A131F42E5000AD0F6 /* hdhomerun_channelscan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdhomerun_channelscan.h; sourceTree = "<group>"; };
@@ -3057,7 +3050,6 @@
 				F56C806E131F42E5000AD0F6 /* libsquish */,
 				F56C8070131F42E5000AD0F6 /* libUPnP */,
 				F56C8146131F42E6000AD0F6 /* libXDAAP */,
-				F56C803F131F42E5000AD0F6 /* tinyXML */,
 				F56C814C131F42E6000AD0F6 /* UnrarXLib */,
 				F56C8036131F42E5000AD0F6 /* DllAdpcm.h */,
 				F56C8037131F42E5000AD0F6 /* DllASAP.h */,
@@ -3069,19 +3061,6 @@
 				F56C803D131F42E5000AD0F6 /* DllVorbisfile.h */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		F56C803F131F42E5000AD0F6 /* tinyXML */ = {
-			isa = PBXGroup;
-			children = (
-				F56C8040131F42E5000AD0F6 /* tinystr.cpp */,
-				F56C8041131F42E5000AD0F6 /* tinystr.h */,
-				F56C8042131F42E5000AD0F6 /* tinyxml.cpp */,
-				F56C8043131F42E5000AD0F6 /* tinyxml.h */,
-				F56C8044131F42E5000AD0F6 /* tinyxmlerror.cpp */,
-				F56C8045131F42E5000AD0F6 /* tinyxmlparser.cpp */,
-			);
-			path = tinyXML;
 			sourceTree = "<group>";
 		};
 		F56C8046131F42E5000AD0F6 /* libexif */ = {
@@ -5614,6 +5593,8 @@
 				F56C8761131F42EC000AD0F6 /* Win32Exception.cpp */,
 				F56C8762131F42EC000AD0F6 /* Win32Exception.h */,
 				F56C8763131F42EC000AD0F6 /* WindowsShortcut.h */,
+				F5610A0214C3781F00171134 /* XBMCTinyXML.cpp */,
+				F5610A0414C3782400171134 /* XBMCTinyXML.h */,
 				F56C86FF131F42EB000AD0F6 /* XMLUtils.cpp */,
 				F56C8700131F42EB000AD0F6 /* XMLUtils.h */,
 			);
@@ -6037,10 +6018,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F56C87FE131F42ED000AD0F6 /* tinystr.cpp in Sources */,
-				F56C87FF131F42ED000AD0F6 /* tinyxml.cpp in Sources */,
-				F56C8800131F42ED000AD0F6 /* tinyxmlerror.cpp in Sources */,
-				F56C8801131F42ED000AD0F6 /* tinyxmlparser.cpp in Sources */,
 				F56C8802131F42ED000AD0F6 /* htsatomic.c in Sources */,
 				F56C8803131F42ED000AD0F6 /* htsbuf.c in Sources */,
 				F56C8804131F42ED000AD0F6 /* htsmsg.c in Sources */,
@@ -6949,6 +6926,7 @@
 				F5E112EC143577A000175026 /* Peripherals.cpp in Sources */,
 				DF6739E21443765F00A5A509 /* FileUPnP.cpp in Sources */,
 				F5BD034F148D496A001B5583 /* CryptThreading.cpp in Sources */,
+				F5610A0314C3781F00171134 /* XBMCTinyXML.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7040,6 +7018,7 @@
 					"-lsqlite3",
 					"-lsamplerate",
 					"-lmicrohttpd",
+					"-ltinyxml",
 					"-lsmbclient",
 					"-lpython2.6",
 					"-lyajl",
@@ -7136,6 +7115,7 @@
 					"-lsqlite3",
 					"-lsamplerate",
 					"-lmicrohttpd",
+					"-ltinyxml",
 					"-lsmbclient",
 					"-lpython2.6",
 					"-lyajl",

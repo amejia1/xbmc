@@ -363,14 +363,6 @@
 		18B7C97D1294380A009E7A26 /* GUIWindowAddonBrowser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B7C97A12943809009E7A26 /* GUIWindowAddonBrowser.cpp */; };
 		18B7C9831294385F009E7A26 /* XMLUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B7C9811294385F009E7A26 /* XMLUtils.cpp */; };
 		18B7C9841294385F009E7A26 /* XMLUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B7C9811294385F009E7A26 /* XMLUtils.cpp */; };
-		18B7CA1412944A8E009E7A26 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B7CA0412944A8E009E7A26 /* tinystr.cpp */; };
-		18B7CA1812944A8E009E7A26 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B7CA0912944A8E009E7A26 /* tinyxml.cpp */; };
-		18B7CA1B12944A8E009E7A26 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B7CA0D12944A8E009E7A26 /* tinyxmlerror.cpp */; };
-		18B7CA1E12944A8E009E7A26 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B7CA1012944A8E009E7A26 /* tinyxmlparser.cpp */; };
-		18B7CA2212944A8E009E7A26 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B7CA0412944A8E009E7A26 /* tinystr.cpp */; };
-		18B7CA2612944A8E009E7A26 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B7CA0912944A8E009E7A26 /* tinyxml.cpp */; };
-		18B7CA2912944A8E009E7A26 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B7CA0D12944A8E009E7A26 /* tinyxmlerror.cpp */; };
-		18B7CA2C12944A8E009E7A26 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B7CA1012944A8E009E7A26 /* tinyxmlparser.cpp */; };
 		18C1D22D13033F6A00CFFE59 /* GLUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18C1D22B13033F6A00CFFE59 /* GLUtils.cpp */; };
 		18C1D22E13033F6A00CFFE59 /* GLUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18C1D22B13033F6A00CFFE59 /* GLUtils.cpp */; };
 		18CCEAEE1112F5B800615FC6 /* PCMRemap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18CCEAEC1112F5B800615FC6 /* PCMRemap.cpp */; };
@@ -1199,6 +1191,8 @@
 		F558F29713ABD7DF00631E12 /* GUIWindowDebugInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F558F29413ABD7DF00631E12 /* GUIWindowDebugInfo.cpp */; };
 		F558F3D013AE663300631E12 /* FileNFS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF0DF15713A3ADA7008ED511 /* FileNFS.cpp */; };
 		F558F3D113AE663A00631E12 /* NFSDirectory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF0DF15913A3ADA7008ED511 /* NFSDirectory.cpp */; };
+		F56109D214C36F0F00171134 /* XBMCTinyXML.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F56109D014C36F0F00171134 /* XBMCTinyXML.cpp */; };
+		F56109D314C36F0F00171134 /* XBMCTinyXML.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F56109D014C36F0F00171134 /* XBMCTinyXML.cpp */; };
 		F56579AF13060D1E0085ED7F /* RenderCapture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F56579AD13060D1E0085ED7F /* RenderCapture.cpp */; };
 		F56A084B0F4A18FB003F9F87 /* karaokewindowbackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F56A084A0F4A18FB003F9F87 /* karaokewindowbackground.cpp */; };
 		F56C8CE7131F5DC6000AD0F6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8CE6131F5DC6000AD0F6 /* libz.dylib */; };
@@ -2283,12 +2277,6 @@
 		18B7C9811294385F009E7A26 /* XMLUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XMLUtils.cpp; sourceTree = "<group>"; };
 		18B7C9821294385F009E7A26 /* XMLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLUtils.h; sourceTree = "<group>"; };
 		18B7C9E7129447B9009E7A26 /* MathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathUtils.h; sourceTree = "<group>"; };
-		18B7CA0412944A8E009E7A26 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
-		18B7CA0512944A8E009E7A26 /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinystr.h; sourceTree = "<group>"; };
-		18B7CA0912944A8E009E7A26 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
-		18B7CA0A12944A8E009E7A26 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
-		18B7CA0D12944A8E009E7A26 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
-		18B7CA1012944A8E009E7A26 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
 		18C1D22B13033F6A00CFFE59 /* GLUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLUtils.cpp; sourceTree = "<group>"; };
 		18C1D22C13033F6A00CFFE59 /* GLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUtils.h; sourceTree = "<group>"; };
 		18CCEAEC1112F5B800615FC6 /* PCMRemap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PCMRemap.cpp; sourceTree = "<group>"; };
@@ -3759,6 +3747,8 @@
 		F558F29513ABD7DF00631E12 /* GUIWindowDebugInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIWindowDebugInfo.h; sourceTree = "<group>"; };
 		F558F51D13AF03AD00631E12 /* ThreadLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadLocal.h; sourceTree = "<group>"; };
 		F558F54D13AF091000631E12 /* Condition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Condition.h; sourceTree = "<group>"; };
+		F56109D014C36F0F00171134 /* XBMCTinyXML.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XBMCTinyXML.cpp; sourceTree = "<group>"; };
+		F56109D114C36F0F00171134 /* XBMCTinyXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBMCTinyXML.h; sourceTree = "<group>"; };
 		F56579AD13060D1E0085ED7F /* RenderCapture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderCapture.cpp; sourceTree = "<group>"; };
 		F56579AE13060D1E0085ED7F /* RenderCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderCapture.h; sourceTree = "<group>"; };
 		F56A08490F4A18FB003F9F87 /* karaokewindowbackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = karaokewindowbackground.h; sourceTree = "<group>"; };
@@ -4446,20 +4436,6 @@
 			);
 			path = playlists;
 			sourceTree = "<group>";
-		};
-		18B7CA0212944A8E009E7A26 /* tinyXML */ = {
-			isa = PBXGroup;
-			children = (
-				18B7CA0412944A8E009E7A26 /* tinystr.cpp */,
-				18B7CA0512944A8E009E7A26 /* tinystr.h */,
-				18B7CA0912944A8E009E7A26 /* tinyxml.cpp */,
-				18B7CA0A12944A8E009E7A26 /* tinyxml.h */,
-				18B7CA0D12944A8E009E7A26 /* tinyxmlerror.cpp */,
-				18B7CA1012944A8E009E7A26 /* tinyxmlparser.cpp */,
-			);
-			name = tinyXML;
-			path = lib/tinyXML;
-			sourceTree = SOURCE_ROOT;
 		};
 		19C28FBDFE9D53C911CA2CBB /* Products */ = {
 			isa = PBXGroup;
@@ -5946,7 +5922,6 @@
 				F5E55E601076B34F006E788A /* libsquish */,
 				E38E1A550D25F9FB00618676 /* libUPnP */,
 				E38E1C840D25F9FC00618676 /* libXDAAP */,
-				18B7CA0212944A8E009E7A26 /* tinyXML */,
 				E38E1CE40D25F9FC00618676 /* UnrarXLib */,
 				E38E15EF0D25F9FA00618676 /* DllAdpcm.h */,
 				88ACB01E0DCF409E0083CFDF /* DllASAP.h */,
@@ -6685,6 +6660,8 @@
 				E38E1E8F0D25F9FD00618676 /* Win32Exception.cpp */,
 				E38E1E900D25F9FD00618676 /* Win32Exception.h */,
 				E38E1E920D25F9FD00618676 /* WindowsShortcut.h */,
+				F56109D014C36F0F00171134 /* XBMCTinyXML.cpp */,
+				F56109D114C36F0F00171134 /* XBMCTinyXML.h */,
 				18B7C9811294385F009E7A26 /* XMLUtils.cpp */,
 				18B7C9821294385F009E7A26 /* XMLUtils.h */,
 			);
@@ -7959,10 +7936,6 @@
 				18B7C938129428CA009E7A26 /* SmartPlayList.cpp in Sources */,
 				18B7C97C1294380A009E7A26 /* GUIWindowAddonBrowser.cpp in Sources */,
 				18B7C9831294385F009E7A26 /* XMLUtils.cpp in Sources */,
-				18B7CA1412944A8E009E7A26 /* tinystr.cpp in Sources */,
-				18B7CA1812944A8E009E7A26 /* tinyxml.cpp in Sources */,
-				18B7CA1B12944A8E009E7A26 /* tinyxmlerror.cpp in Sources */,
-				18B7CA1E12944A8E009E7A26 /* tinyxmlparser.cpp in Sources */,
 				432D7CE412D86DA500CE4C49 /* NetworkLinux.cpp in Sources */,
 				432D7CF712D870E800CE4C49 /* TCPServer.cpp in Sources */,
 				433219D712E4C6A500CD7486 /* FileUDF.cpp in Sources */,
@@ -8043,6 +8016,7 @@
 				DF85BAB51443669A000686BE /* FileUPnP.cpp in Sources */,
 				DF673AA51443819600A5A509 /* AddonManager.cpp in Sources */,
 				F5BD02F6148D3A7E001B5583 /* CryptThreading.cpp in Sources */,
+				F56109D214C36F0F00171134 /* XBMCTinyXML.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -8880,10 +8854,6 @@
 				18B7C942129428CA009E7A26 /* SmartPlayList.cpp in Sources */,
 				18B7C97D1294380A009E7A26 /* GUIWindowAddonBrowser.cpp in Sources */,
 				18B7C9841294385F009E7A26 /* XMLUtils.cpp in Sources */,
-				18B7CA2212944A8E009E7A26 /* tinystr.cpp in Sources */,
-				18B7CA2612944A8E009E7A26 /* tinyxml.cpp in Sources */,
-				18B7CA2912944A8E009E7A26 /* tinyxmlerror.cpp in Sources */,
-				18B7CA2C12944A8E009E7A26 /* tinyxmlparser.cpp in Sources */,
 				432D7CE512D86DA500CE4C49 /* NetworkLinux.cpp in Sources */,
 				432D7CF812D870E800CE4C49 /* TCPServer.cpp in Sources */,
 				433219DA12E4C6A500CD7486 /* FileUDF.cpp in Sources */,
@@ -8963,6 +8933,7 @@
 				F54BCC601439345300F86B0F /* HotKeyController.m in Sources */,
 				DF85BAB61443669A000686BE /* FileUPnP.cpp in Sources */,
 				F5BD02F7148D3A7E001B5583 /* CryptThreading.cpp in Sources */,
+				F56109D314C36F0F00171134 /* XBMCTinyXML.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -9057,6 +9028,7 @@
 					"-lsqlite3",
 					"-lsamplerate",
 					"-lmicrohttpd",
+					"-ltinyxml",
 					"-lyajl",
 					"-ljpeg",
 					"-lcrypto",
@@ -9155,6 +9127,7 @@
 					"-lsqlite3",
 					"-lsamplerate",
 					"-lmicrohttpd",
+					"-ltinyxml",
 					"-lyajl",
 					"-ljpeg",
 					"-lcrypto",
@@ -9315,6 +9288,7 @@
 					"-lsqlite3",
 					"-lsamplerate",
 					"-lmicrohttpd",
+					"-ltinyxml",
 					"-lyajl",
 					"-ljpeg",
 					"-lcrypto",
@@ -9416,6 +9390,7 @@
 					"-lsqlite3",
 					"-lsamplerate",
 					"-lmicrohttpd",
+					"-ltinyxml",
 					"-lyajl",
 					"-ljpeg",
 					"-lcrypto",
