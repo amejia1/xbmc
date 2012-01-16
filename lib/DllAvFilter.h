@@ -47,7 +47,9 @@ extern "C" {
     #include <ffmpeg/avfiltergraph.h>
   #endif
   /* for av_vsrc_buffer_add_frame */
-  #if !(defined HAVE_LIBAVFILTER_VSRC_BUFFER_H)
+  #if (defined HAVE_LIBAVFILTER_VSRC_BUFFER_H)
+    #include <libavfilter/vsrc_buffer.h>
+  #else
     #if LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,8,0)
       #include <libavfilter/avcodec.h>
     #elif LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,7,0)
@@ -60,8 +62,6 @@ extern "C" {
       int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter,
             AVFrame *frame, int64_t pts, AVRational pixel_aspect);
     #endif
-  #else
-    #include <libavfilter/vsrc_buffer.h>
   #endif
 #else
   #include "libavfilter/avfiltergraph.h"
@@ -86,7 +86,9 @@ public:
   virtual int avfilter_graph_config(AVFilterGraph *graphctx, void *log_ctx)=0;
   virtual int avfilter_poll_frame(AVFilterLink *link)=0;
   virtual int avfilter_request_frame(AVFilterLink *link)=0;
-#if !(defined HAVE_LIBAVFILTER_VSRC_BUFFER_H)
+#if (defined HAVE_LIBAVFILTER_VSRC_BUFFER_H)
+  virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int64_t pts, AVRational pixel_aspect)=0;
+#else
 #if LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,13,0)
   virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int flags)=0;
 #elif LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,7,0)
@@ -96,8 +98,6 @@ public:
 #else
   virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int64_t pts, AVRational pixel_aspect)=0;
 #endif
-#else
-  virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int64_t pts, AVRational pixel_aspect)=0;
 #endif
   virtual AVFilterBufferRef *avfilter_get_video_buffer(AVFilterLink *link, int perms, int w, int h)=0;
   virtual void avfilter_unref_buffer(AVFilterBufferRef *ref)=0;
@@ -179,7 +179,9 @@ public:
   }
   virtual int avfilter_poll_frame(AVFilterLink *link) { return ::avfilter_poll_frame(link); }
   virtual int avfilter_request_frame(AVFilterLink *link) { return ::avfilter_request_frame(link); }
-#if !(defined HAVE_LIBAVFILTER_VSRC_BUFFER_H)
+#if (defined HAVE_LIBAVFILTER_VSRC_BUFFER_H)
+  virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int64_t pts, AVRational pixel_aspect) { return ::av_vsrc_buffer_add_frame(buffer_filter, frame, pts, pixel_aspect); }
+#else
 #if LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,13,0)
   virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int flags) { return ::av_vsrc_buffer_add_frame(buffer_filter, frame, flags); }
 #elif LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,7,0)
@@ -189,8 +191,6 @@ public:
 #else
   virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int64_t pts, AVRational pixel_aspect) { return ::av_vsrc_buffer_add_frame(buffer_filter, frame, pts, pixel_aspect); }
 #endif
-#else
-  virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int64_t pts, AVRational pixel_aspect) { return ::av_vsrc_buffer_add_frame(buffer_filter, frame, pts, pixel_aspect); }
 #endif
   virtual AVFilterBufferRef *avfilter_get_video_buffer(AVFilterLink *link, int perms, int w, int h) { return ::avfilter_get_video_buffer(link, perms, w, h); }
   virtual void avfilter_unref_buffer(AVFilterBufferRef *ref) { ::avfilter_unref_buffer(ref); }
