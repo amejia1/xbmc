@@ -1274,7 +1274,7 @@ if test "$use_external_ffmpeg" = "yes"; then
         AVRational a;
         av_vsrc_buffer_add_frame(NULL, NULL, 0, a);
       }
-      ]]), AC_DEFINE([USE_LIBAVFILTER_VSRC_BUFFER_H],
+      ]]), AC_DEFINE([USE_OLD_AV_VSRC_BUFFER_ADD_FRAME],
         [1], [Check if SoC av_vsrc_buffer_add_frame() is defined in libavfilter/vsrc_buffer.h.]),)
   
   # Check for 'PIX_FMT_VDPAU_MPEG4' from libavutil
