@@ -49,4 +49,16 @@ public:
   {
     return SaveFile(filename.c_str());
   }
+  struct Entity
+  {
+    const char* str;
+    unsigned int strLength;
+    char chr;
+  };
+  enum
+  {
+    NUM_ENTITY = 5,
+  };
+  static void ConvertUTF32ToUTF8(unsigned long input, char* output, int* length);
+  static Entity entity[NUM_ENTITY];
 };
