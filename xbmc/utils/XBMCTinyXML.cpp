@@ -18,19 +18,15 @@
  */
 
 #include "XBMCTinyXML.h"
-#include "filesystem/SpecialProtocol.h"
 #include "filesystem/File.h"
-#include "utils/CharsetConverter.h"
 
 CXBMCTinyXML::CXBMCTinyXML()
 {
-  convertToUtf8 = false;
 }
 
 CXBMCTinyXML::CXBMCTinyXML(const char *documentName)
 {
   LoadFile(documentName);
-  convertToUtf8 = false;
 }
 
 bool CXBMCTinyXML::LoadFile(const char *_filename, TiXmlEncoding encoding)
@@ -171,29 +167,6 @@ bool CXBMCTinyXML::LoadFile(const char *_filename, TiXmlEncoding encoding)
   buf = 0;
 
   Parse(data.c_str(), 0, encoding);
-  TiXmlNode *node;
-  if (convertToUtf8 && (node = FirstChild()) != NULL)
-  {
-    /* TODO: Per TinyXML comments...
-    * "In correct XML the declaration is the first entry in the file."
-    * Should we try to find declarations in other parts of XML?
-    */
-    if (node->Type() == TINYXML_DECLARATION)
-    {
-      TiXmlDeclaration *dec = dynamic_cast<TiXmlDeclaration*>(node);
-      CStdString enc(dec->Encoding());
-      if (!enc.empty() && enc.compare("UTF-8") && enc.compare("UTF8"))
-      {
-        CStdString temp;
-        g_charsetConverter.stringCharsetToUtf8(enc, data, temp);
-        data = temp;
-        encoding = TIXML_ENCODING_UTF8;
-        Clear();
-        location.Clear();
-        Parse(data.c_str(), 0, encoding);
-      }
-    }
-  }
 
   if (  Error() )
     return false;
@@ -212,14 +185,4 @@ bool CXBMCTinyXML::SaveFile(const char *filename) const
     return true;
   }
   return false;
-}
-
-void CXBMCTinyXML::setConvertToUtf8(bool value)
-{
-  convertToUtf8 = value;
-}
-
-bool CXBMCTinyXML::getConvertToUtf8()
-{
-  return convertToUtf8;
 }
